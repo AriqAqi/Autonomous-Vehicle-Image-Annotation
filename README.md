@@ -9,7 +9,6 @@ This project is a practical demonstration of how image data for autonomous vehic
 
 This repository contains:
 - Labeled sample images for vehicles, pedestrians, bicycle, and traffic signs
-- Polygon shapes are used instead of basic rectangles to capture the true contour of each object
 - Annotations exported in **COCO format**
 - A clean and structured project setup ready to integrate with deep learning pipelines
 
@@ -40,3 +39,19 @@ This kind of project reflects the **backbone of supervised machine learning in c
 | **COCO Format**  | Industry-standard annotation format   |
 | **Python**       | Used for image downloading scripts    |
 | **GitHub**       | Sharing, versioning, and showcasing   |
+
+##  Why Use Polygon Annotation?
+
+**Polygon annotations** offer a more precise way to mark objects by allowing to draw multiple connected points around their exact shapes. This is particularly useful in complex, real-world environments like urban streets where object boundaries are not always rectangular.
+
+##  Advantages:
+-  **Higher Accuracy**: Captures the true contour of irregular objects (e.g., people walking, cars at an angle).
+-  **Better for Instance Segmentation**: Essential for training models that go beyond detection (e.g., Mask R-CNN).
+-  **Rich Spatial Information**: Useful for depth estimation and fine-grained analysis in computer vision.
+
+##  Disadvantages:
+-  **More Time-Consuming**: Requires placing multiple points per object, increasing labeling time.
+-  **More Computationally Complex**: Segmentation models using polygon data require more processing power and careful training.
+-  **Requires Labeling Skill**: Annotators must be careful to avoid inconsistent polygon shapes or overlapping regions.
+
+> Despite the extra effort, polygon annotations significantly enhance model performance in real-world applications like **autonomous driving**, **traffic management systems**, and **urban object detection**.
